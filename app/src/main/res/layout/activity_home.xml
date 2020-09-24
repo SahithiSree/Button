@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/showLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginStart="150dp"
+            android:hint="Location"
+            android:textSize="24sp" />
+
+
+    <Button
+        android:id="@+id/bt_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text="Get Location" />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showLocation"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="29dp"
+        android:clickable="true"
+        android:onClick="on"
+        android:text="Turn On" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_marginStart="150dp"
+        android:onClick="list"
+        android:text="List devices" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_marginStart="150dp"
+        android:clickable="true"
+        android:text="turn off"
+        android:onClick="off" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="enter number"
+        android:id="@+id/editTextNumber"
+        android:layout_marginStart="150dp"
+        android:inputType="number"
+        android:layout_below="@+id/button4"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:hint="message"
+        android:id="@+id/editText"
+
+        android:layout_below="@+id/editTextNumber"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginStart="150dp"
+        android:text="SEND SMS"
+        android:onClick="sendSMS"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="138dp"
+        android:layout_marginStart="150dp"
+        android:text="Paired devices:"
+        android:textColor="#ff34ff06"
+        android:textSize="25dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"/>
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button2"
+
+        android:layout_below="@+id/textView2" />
+
+</RelativeLayout>
